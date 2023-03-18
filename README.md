@@ -15,7 +15,7 @@ Belum Tersedia
 
 1. Buka file yang ingin kamu simpan file PBP-KELOMPOK ini, di dalam direktory tersebut bukalah terminal dan masukkan dengan perintah:
 ```
-Git Clone https://github.com/Dafasr99/PBP-Kelompok.git
+Git Clone https://github.com/StudyBee-PBP/StudyBee.git
 ```
 
 2. Di dalam direktori StudyBee, bukalah command prompt atau shell dan buatlah sebuah virtual environment. Virtual environment ini berguna untuk mengisolasi package serta dependencies dari aplikasi sehingga tidak bertabrakan dengan versi lain yang ada pada komputermu. Kamu dapat membuat virtual environment dengan perintah:
