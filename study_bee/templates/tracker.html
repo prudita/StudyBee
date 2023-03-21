@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h5>Nama: </h5>
+<p>Fill me!</p>
+
+<h5>Sesi terakhir login: {{ last_login }}</h5>
+
+<table>
+    <tr>
+        <th>Nama</th>
+        <th>Jenis</th>
+        <th>Jumlah</th>
+        <th>Tanggal</th>
+        <th>Deskripsi</th>
+    </tr>
+    {% for transaction in list_of_transactions %}
+    <tr>
+        <td>{{transaction.name}}</td>
+        <td>{{transaction.type}}</td>
+        <td>{{transaction.amount}}</td>
+        <td>{{transaction.date}}</td>
+        <td>{{transaction.description}}</td>
+    </tr>
+{% endfor %}
+    {% comment %} Tambahkan data di bawah baris ini {% endcomment %}
+</table>
+
+<br>
+<a href="{% url 'study_bee:create_transaction' %}">
+    <button>
+        Transaksi Baru
+    </button>
+</a>
+
+<a href="{% url 'study_bee:logout' %}">
+    <button>
+        Logout
+    </button>
+</a>
+
+
+{% endblock content %}
