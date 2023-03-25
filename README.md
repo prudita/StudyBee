@@ -16,22 +16,22 @@ Dengan menggunakan aplikasi ini, pengguna dapat mengoptimalkan waktu belajar mer
 ## Daftar modul yang akan diimplementasikan
 Daftar modul atau fitur-fitur yang akan diimplementasikan pada website StudyBee adalah sebagai berikut:
 
-Study List: Modul ini akan memungkinkan pengguna untuk mencatat dan mengatur daftar mata pelajaran dan tugas-tugas yang harus mereka selesaikan. Dengan modul ini, pengguna dapat memantau dan mengingatkan diri mereka sendiri tentang tugas-tugas yang harus diselesaikan.
+- Study List: Modul ini akan memungkinkan pengguna untuk mencatat dan mengatur daftar mata pelajaran dan tugas-tugas yang harus mereka selesaikan. Dengan modul ini, pengguna dapat memantau dan mengingatkan diri mereka sendiri tentang tugas-tugas yang harus diselesaikan.
 
-Forum Diskusi Tugas: Modul ini akan memungkinkan pengguna untuk berdiskusi dengan teman-teman mereka tentang tugas dan proyek tertentu. Hal ini akan membantu pengguna dalam memahami materi pelajaran dan mendapatkan ide-ide baru dari teman-teman mereka.
+- Forum Diskusi Tugas: Modul ini akan memungkinkan pengguna untuk berdiskusi dengan teman-teman mereka tentang tugas dan proyek tertentu. Hal ini akan membantu pengguna dalam memahami materi pelajaran dan mendapatkan ide-ide baru dari teman-teman mereka.
 
-Jadwal Semester: Modul ini akan memungkinkan pengguna untuk mengatur jadwal kuliah dan ujian mereka sehingga mereka dapat mengalokasikan waktu belajar mereka secara efisien.
+- Jadwal Semester: Modul ini akan memungkinkan pengguna untuk mengatur jadwal kuliah dan ujian mereka sehingga mereka dapat mengalokasikan waktu belajar mereka secara efisien.
 
-Kalkulator Nilai (Nilai & bobot): Modul ini akan membantu pengguna dalam menghitung nilai mereka dan bobot tugas mereka. Fitur ini akan membantu pengguna untuk memperkirakan nilai mereka dan memahami bagaimana bobot tugas tertentu dapat mempengaruhi nilai akhir mereka.
+- Kalkulator Nilai (Nilai & bobot): Modul ini akan membantu pengguna dalam menghitung nilai mereka dan bobot tugas mereka. Fitur ini akan membantu pengguna untuk memperkirakan nilai mereka dan memahami bagaimana bobot tugas tertentu dapat mempengaruhi nilai akhir mereka.
 
-Kalkulator IPK: Modul ini akan memungkinkan pengguna untuk menghitung IPK mereka secara akurat dan memantau perkembangan akademik mereka.
+- Kalkulator IPK: Modul ini akan memungkinkan pengguna untuk menghitung IPK mereka secara akurat dan memantau perkembangan akademik mereka.
 
-Class Notes: Modul ini akan memungkinkan pengguna untuk membuat catatan kelas mereka dan memperbaiki pemahaman mereka tentang materi pelajaran.
+- Class Notes: Modul ini akan memungkinkan pengguna untuk membuat catatan kelas mereka dan memperbaiki pemahaman mereka tentang materi pelajaran.
 
 ## Role
-Guest (user yang belum log in): hanya dapat mengakses kalkulator nilai & kalkulator IPK
-User (Pengguna yang sudah terautentikasi): dapat mengakses semua fitur, kecuali menghapus forum dan komentar dari user lain
-Admin: dapat mengakses semua fitur, termasuk menghapus forum dan komentar user lain
+- Guest (user yang belum log in): hanya dapat mengakses kalkulator nilai & kalkulator IPK
+- User (Pengguna yang sudah terautentikasi): dapat mengakses semua fitur, kecuali menghapus forum dan komentar dari user lain
+- Admin: dapat mengakses semua fitur, termasuk menghapus forum dan komentar user lain
 
 ## Tutorial
 
