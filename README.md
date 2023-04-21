@@ -10,7 +10,7 @@
 Belum Tersedia
 
 ## Cerita aplikasi yang diajukan serta manfaatnya
-StudyBee adalah sebuah website aplikasi yang berguna bagi para pelajar dan mahasiswa dalam memudahkan mereka dalam memantau dan mengatur jadwal belajar mereka. Aplikasi ini menawarkan berbagai fitur yang berguna seperti daftar studi, forum diskusi tugas, jadwal semester, kalkulator nilai dan bobot, kalkulator IPK, dan catatan kelas. Semua fitur tersebut dapat diakses secara online dan gratis.
+StudyBee adalah sebuah website aplikasi yang berguna bagi para pelajar dan mahasiswa dalam memudahkan mereka dalam memantau dan mengatur jadwal belajar mereka. Aplikasi ini menawarkan berbagai fitur yang berguna seperti daftar studi, forum diskusi tugas, jadwal semester, kalkulator nilai dan bobot, form diary, dan catatan kelas. Semua fitur tersebut dapat diakses secara online dan gratis.
 Dengan menggunakan aplikasi ini, pengguna dapat mengoptimalkan waktu belajar mereka dan meningkatkan prestasi akademik mereka.
 
 ## Daftar modul yang akan diimplementasikan
@@ -24,12 +24,12 @@ Daftar modul atau fitur-fitur yang akan diimplementasikan pada website StudyBee 
 
 - Kalkulator Nilai (Nilai & bobot): Modul ini akan membantu pengguna dalam menghitung nilai mereka dan bobot tugas mereka. Fitur ini akan membantu pengguna untuk memperkirakan nilai mereka dan memahami bagaimana bobot tugas tertentu dapat mempengaruhi nilai akhir mereka.
 
-- Kalkulator IPK: Modul ini akan memungkinkan pengguna untuk menghitung IPK mereka secara akurat dan memantau perkembangan akademik mereka.
+- Form Diary : Modul ini memungkinkan pengguna untuk menceritakan keluh kesah suka mau-pun duka dalam kegiatan sehari-harinya
 
 - Class Notes: Modul ini akan memungkinkan pengguna untuk membuat catatan kelas mereka dan memperbaiki pemahaman mereka tentang materi pelajaran.
 
 ## Role
-- Guest (user yang belum log in): hanya dapat mengakses kalkulator nilai & kalkulator IPK
+- Guest (user yang belum log in): hanya dapat mengakses kalkulator nilai 
 - User (Pengguna yang sudah terautentikasi): dapat mengakses semua fitur, kecuali menghapus forum dan komentar dari user lain
 - Admin: dapat mengakses semua fitur, termasuk menghapus forum dan komentar user lain
 

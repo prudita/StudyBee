@@ -53,7 +53,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main',
-    'study_bee'
+    'study_bee',
+    'diary_tracker',
 ]
 
 MIDDLEWARE = [
