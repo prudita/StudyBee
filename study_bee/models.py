@@ -1,14 +1,17 @@
-
+from time import timezone
 from django.db import models
+from django.utils import timezone
 
-TYPE_CHOICES = [
-    ('Pengeluaran', 'Pengeluaran'),
-    ('Pemasukan', 'Pemasukan')
-]
+class StudyPlan(models.Model):
+    TYPE_CHOICES = [
+        ('group', 'Group'),
+        ('individual', 'Individual'),
+    ]
+    
+    name = models.CharField(max_length=50, default='')
+    type = models.CharField(max_length=20, choices=TYPE_CHOICES, default='')
+    subject = models.CharField(max_length=100, default='')
+    date = models.DateField(default=timezone.now)
+    location = models.CharField(max_length=200, default='')
+    description = models.TextField(default='')
 
-class TransactionRecord(models.Model):
-    name = models.CharField(max_length=50)
-    type = models.CharField(max_length=20, choices=TYPE_CHOICES)
-    amount = models.IntegerField()
-    date = models.DateTimeField(auto_now_add=True)
-    description = models.TextField()

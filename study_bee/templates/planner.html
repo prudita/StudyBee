@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <head>
+        <style>
+            .btn-outline-secondary.delete:hover {
+                color: #fff !important;
+                background-color: red;
+                border-color: red;
+            }
+
+        </style>
+    </head>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+        <div class="d-flex">
+        <a class="navbar-brand ml-1 mr-2" href="#" style="color:#FFC107; text-shadow: 0px 1px 1px #000000">StudyBee</a>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+            <a class="nav-link" href="#">Planner</a>
+            </li>
+        </ul>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+            <a class="nav-link" href="#">Log out</a>
+            </li>
+        </ul>
+        </div>
+    </nav>
+
+    <br>
+
+    <div class="d-flex justify-content-center">
+        <button type="button" class="btn btn-warning text-dark shadow" data-toggle="modal" data-target="#addPlanModal" style="background-color: #FFC107">Add a Plan</button>
+    </div>
+    
+    <div class="modal fade" id="addPlanModal" tabindex="-1" role="dialog" aria-labelledby="addPlanModalLabel" aria-hidden="true">
+        {% include 'add_plan.html' %}
+    </div>
+
+    <div class="container my-4">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
+            {% for study_plan in study_plans %}
+            <div class="col mb-4">
+            <div class="card shadow">
+                <div class="card-body">
+                <h5 class="card-title">{{ study_plan.name }} <small class="text-muted">{{ study_plan.get_type_display }}</small></h5>
+                <p class="card-text">{{ study_plan.subject }}</p>
+                <p class="card-text">{{ study_plan.date }}</p>
+                <p class="card-text">
+                    {% if study_plan.date|date:'Ymd' < now|date:'Ymd' %}
+                    <span style="color:red">outdated</span>
+                    {% elif study_plan.date|date:'Ymd' == now|date:'Ymd' %}
+                    <span style="color:blue">ongoing</span>
+                    {% else %}
+                    <span style="color:green">upcoming</span>
+                    {% endif %}
+                </p>
+                <p class="card-text">{{ study_plan.location }}</p>
+                <p class="card-text">{{ study_plan.description }}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    <a href="{% url 'study_bee:edit_plan' plan_id=study_plan.pk %}" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#editPlanModal{{ study_plan.pk }}">Edit</a>
+                    <div class="modal fade" id="editPlanModal{{ study_plan.pk }}" tabindex="-1" role="dialog" aria-labelledby="editPlanModalLabel" aria-hidden="true">
+                        {% include 'edit_plan.html' %}
+                    </div>
+        
+                    <form method="POST" action="{% url 'study_bee:delete_plan' plan_id=study_plan.pk %}" class="d-inline">
+                        {% csrf_token %}
+                        <button type="button" class="btn btn-sm btn-outline-secondary delete" data-toggle="modal" data-target="#deletePlanModal{{ study_plan.pk }}">Delete</button>
+                        <div class="modal fade" id="deletePlanModal{{ study_plan.pk }}" tabindex="-1" role="dialog" aria-labelledby="deletePlanModalLabel" aria-hidden="true">
+                        {% include 'delete_plan.html' %}
+                        </div>
+                    </form>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+            {% empty %}
+            <p>No plan yet.</p>
+            {% endfor %}
+        </div>
+    </div>
+    
+
+{% endblock %}
