@@ -14,16 +14,6 @@ def show_tracker(request):
     }
     return render(request, "diary_tracker.html", context)
 
-def create_transaction(request):
-    form = DiaryRecordForm(request.POST or None)
-
-    if form.is_valid() and request.method == "POST":
-        form.save()
-        return HttpResponseRedirect(reverse('diary_tracker:show_tracker'))
-
-    context = {'form': form}
-    return render(request, "create_transaction.html", context)
-
 def create_diary(request):
     form = DiaryRecordForm(request.POST or None)
 

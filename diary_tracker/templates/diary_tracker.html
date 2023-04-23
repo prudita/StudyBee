@@ -11,6 +11,11 @@
   .btn-primary {
     margin-left: 20px;
   }
+
+  .navbar {
+    background-color: #0069d9;
+  }
+  
 </style>
 
 <script>
@@ -69,35 +74,22 @@
 </script>
 
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <div class="container-fluid">
-    <nav class="navbar bg-light">
-      <div class="container">
-        <a href="#">
-          <img
-            src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAsJCQcJCQcJCQkJCwkJCQkJCQsJCwsMCwsLDA0QDBEODQ4MEhkSJRodJR0ZHxwpKRYlNzU2GioyPi0pMBk7IRP/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCAEbARsDASIAAhEBAxEB/8QAGwABAAIDAQEAAAAAAAAAAAAAAAEFAgQGAwf/xABEEAABAgIDCA8HBAMAAwEAAAAAAQIDEQQhURIxMkFysdHhBRMUFTM0RVNxdYGDkrTBIlJhkZOi8AZUsuIjQqFDYoLS/8QAGwEBAAIDAQEAAAAAAAAAAAAAAAMFAQQGAgf/xAA1EQEAAQIEAgcGBQUBAAAAAAAAAQIDBAURcTI0EhMVMUFSkSEzQ1Gh0RRhYoHwIiNyweGx/9oADAMBAAIRAxEAPwC7ms16RXaMagqHZldortADBXaK7QAFdortAAV2iu0ABXaK7QAFdortAAV2iu0ABXaK7QAFdortAAV2iu0ABXaK7QAFdortAAV2iu0ABXaK7QAFdortAAV2iu0ABXaTXaQSGUY16QMa9IAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABJBIEY1Axr0gMhJADCSAAJIE0FQEkCaCoABUKgBJFQmgACoVASQJoKgJIE0FQACofL/gACoACSAAAAEkAACSAAAAAkgkCMa9IGNQGQABhk1rnvaxuE5ZJO92lnDo0GGkrlHOxuek1VfhO8aVD4wzof/Eszl85xNyK4tUzpGmrWvVTroxuIfuM8LdAuIfuM8LdBkDn+sr+c+qDWWNxD9xnhboFxD9xnhboMtQHWV/OfU1ljcQ/cZ4W6BcQ/cZ4W6DIDrK/nPqayxuIfuM8LdAuIfuM8LdBkNQ6yv5z6mssbiH7jPC3QLiH7jPC3QZAdZX859TWWNxD9xnhboG1w/cZ4W6DIDrK/nPqayxuIfuM8LdAuIfuM8LdBkB1lfzn1NZQ2HDum+wzCT/VtvQcTJN921JLfRKsUt0HcNwm5SZziOWG9aJ5gvcnqmrrNZ8Edye52ish1zYy/7qaDziUeBERUVqNXE5tSp8j2tBSUXrlExVTVOu6SKphTPY6G97HX2rLp+JibNN4fphw5/JTWO+w12btqmufGG9TOsRIADYegGTERyyX/AIem1t+JLRaqrjWFdicysYWvq7murxBKpJVSxVII5jRv01RVEVR4gAMPQSQSBGNekDGoDIAAw2KHxhuS/F8Cz/LxWUPjDcl+Yszjs65iNoal7iNeIfl4awUqE1Yh+XhqAD8vC3QAA/Lw1YgNQD8vD8vAAPy8Py8AA1Yh+XgAJbhNykznEcrt60TzB27cJuUmc4jlhvWieYL7Jvi7I6/B21ugfl4WgoUitpvD93D9TWNmm8P3cP1Nc77ActRs3qOGEHlt8GcrrtksiY89qiSsSfROs0DYuVzTOkNm3biqNZWsFUcqKioqKi1oe5UQYsWHEZtbXPc9zWJDaiuWIqrJGtRK52F/EoOycKAsfccRyo262tHMdETH7TWrOrHKZv4W7E0T+Tj89wd2cRTVTGsTGiuiOYxXK5URJrfx14kPNsaE5blHVremipM0nve9yucs3Ks11IY58RXVXvb7HYWrHRtxTPfELMEJOTZ35JPpkSTogkgkMIxqBjUBkAAYbFD4w3JfmLMrKHxhuS/MWZx2dcxG0NS9xGsDWClQmozhw3xnthsldOupTWSVJO+YajZoPGoPRE/ipsYW3F29Rbq7pmI9ZeLk9GmZhnvbS7YXiXQN7aZbC8S6DPZin0qgpRFgbXOKsVH3bbrBRspVpaVO/wBspbR/pf2O0qyPA0zpOvq17VOJu09OnTRZ720y2F4l0De2mWwsX+y6Cs3+2Uto/wBL+w3+2Uto/wBL+x57FwH6vVL1OK/JZ720y2F4l0De2mWwvEugrN/tlLYH0v7Df7ZS2B9L+w7FwH6vVjqcV+Sz3tplsLxLoG9tMtheJdBWb/bKWwPpf2G/2yltH+l/Ydi4D9XqdTivyWe9tLtheJdBrRYT4MRYb5XSIirc1pWkza2H2QpdOdS0j7XKE2CrLhtzW5XTnWthhshxqJkw/wCJW5pleHwuHi7Z11mdPbO6Oiu5F2bdzwazcJuUmc4jldvWieYO3bhNykznEcsN60TzBq5N8XZPX4O2tAtBQpFbTeH7uH6msbNN4fu4fqax32A5ajZvUcMNWlK72G/6qir0qlRrG9HRqw3zSdyiqnwU0T3dj+pvWpiadF7+l2QXbIxXPRFiQ6K50GeJVejXKnxlnO0qPmdGjUmBHgxaM5zY7V/xq3HOpUVFqlbM6aLs3spudWw2UZKRcpdPa1y1yrVjXLKdk5llg6/7cxp3Oazimmm/TNVUf1ezb/im2cZBh7K09sK5Rt2xyo28j3Ma5yfMrTJ7nve973Oc97nOe5yqrnOVZqqquMxS+hV1z0qpn5ultUzRbppmddIbtHc5YaTxOVEX4HsQ1rWoiNSSJeJNumNIiGtVOs6hJBJl5RjUDGoDIAAw2KHxhuS/MWZWUPjDcl+L4Fn+Xjjs65iNoal7iNYGvEPy8UqE1GzQeNQeiJ/FTW1YjZoPGoPRExf+qm5gOatf5R/7CO7wTsw/Ud7Y/ppGZhytJpO5olEV3BRHRUi1VyREkqKdV+o8HY/pj5mHLx6Okd9GV1wsOGsXbGOSd217LmSH0a/xylwev4aOj3/9a0Klx3UZlJfW2HGiJSWtaiLtWJW/FKjbo6x3wmvjSSJEunoiIn+NrsFvSiSPNaKm1U+E1yIlKV7km2qGrmo2VS3qjYaitRiLJVRGotV9UQhbdMVR3q2HSKUkCC9Yt2saj0tzbprbpkWA1VmkkSpfihsNpKupNBh/+ONAY58kThIntNr7F+ZEKhXCxVfEu5sjwoKSk2EyKqq6SWrMwbsfVOJEm9rKK2G5qKlztKIirJVlWEelyNEQI9NpCxmteiq1kVLpYbUayMkT2GpK/NL570aNFpDokRWqyC1GwmsVEulipwjlWxFqToIo1FWjvfEu5q9Yl21qey6b1cxa65olR6wISwWvarkdOLFiJJJSR7rqQeqKa/Zq6L9N4eyGTR88Q2NkONRMmH/E8P03h7IZNGzxD32Q41EyWfxK3PORp/yj/atr5urb/UNZuE3KTOcRyw3rRPMHbtwm5SYvicRyu3rRPMFHk3xdklzwdtaBboH5eKFIrabw/dw/U1jZpvD93D9TWO+wHLUbN6jhhCoioqLeVFRTXWipOp6onxSamyDbmmKu9LTVNPcijwmQ3ezfks1W+ptHjDwuw9ixw0RFHscRn064mNfk0o0BkRz1mrXKqzVMfSh5sozWrNzrqVaJKSdpsuwnZSkFfVRTNWrs7NdXVUx+UAAMvQSQSBGNQMagMgADDYofGG5L8xZlZQ+MNyX5izOOzrmI2hqXuI1gawUqE1GzQeNQeiJ/FTW1HpBiugxGxGoiq26qdOVaSxGzhLlNu/RXV3RMT9Xi5E1UTENnZuiUulpQ0o8O72tY137TWyukbLCX4FNvPsv+2T6sLSXe+cfm4fzcN849f+KF83Hb1ZxgKp1mqfSUFmvEWqIopiFJvPsv+2T6sLSN59l/2yfVhaS73zj81C+bhvnH5qFixuPPauA80+n/ABL+IxPlj+fupN59l/2yfVhaRvPsv+2T6sLSXe+cfmoXzcN84/NQvm4drYDzT6SfiMT5Y/n7qTefZf8AbJ9WFpG8+y/7ZPqwv/0Xe+cfmoXzcN84/NQvm4drYDzT6H4jE+WP5+7y2EoVNoj6YtIhIxIjYCM9tjpq1XzwVW1BshxqJkw/4nrvnH5qF83GpGjOjxHRHIiKqIio2cqkljK3Nsxw2Iw0WrM6zrHhuiopuVXpuXI72DcJuUmc4jlhvWieYO3bhNykznEcrt60TzBo5N8XZNc8HbWgWgoUitpvD93D9TWNmm8P3cP1NY77ActRtDeo4YAAbqRnDwuw9jxh4XYexYYfgcRnvMxs13YTspSCXYTspSDQnvl2Vn3dOwADCQJIJAjGoGNQGQABhsUPjDcl+YsysofGG5L8xZnHZ1zEbQ1L3EnWQNYKVCaiSNQAC0C0ANQGoAAAJIAAnUCNQAluE3KTOcRyw3rRPMHbtwm5SZzh+V29aJ5gvsm+LsjueDt7QLQUKRW03h+7h+prmxTeH7uH6msd9gOWo2hvUcMAAN1I9IeF2eh6njDwuw9iww/A4jPeZjZruwnZSkEuwnZSkGhPfLsrPu6dgAGEgSQSBGNekDGoDIAAw2KHxhuS/F8CzKyh8YbkvzFmcdnXMRtDUvcRrA1gpUJqA1AALQLQA1AagAAAkgkgBqA1ACW4TcpM5xHK7etE8wdu3CblJnOI5Yb1onmC+yb4uyO54O2tAtBQpFbTeH7uH6msbNN4fu4fqax32A5ajZvUcMAAN1Izh4XYex4w8LsPYsMPwOIz3mY2a7sJ2UpBLsJ2UpBoT3y7Kz7unYABhIEkEgRjUDGoDIAAw2KHxhuS/MWZWUPjDcl+Yszjs65iNoal7iNYGsFKhNQGoABaBaAGoDUAAAAAANQGoAS3CblJnOI5Yb1onmDt24TcpM5xHK7etE8wX2TfF2R3PB21oFoKFIrabw/dw/U1jZpvD93D9TWO+wHLUbN6jhgABupGcPC7D2PGHhdh7Fhh+BxGe8zGzXdhOylIJdhOylINCe+XZWfd07AAMJAkgkCMagY1AZAAGGxQ+MNyX5izKyh8YbkvzFmcdnXMRtDUvcRrA1gpUJqACqjUmqtRFvK5UROyZnTXuAWj5AwA1AagAAAAABqA1ACW4TcpM5xHLDetE8wdu3CblJnOI5Xb1onmC+yb4uyO54O2tAtBQpFbTeH7uH6msbNN4fu4fqax32A5ajaG9RwwAA3UjOHhdh7HjDwuw9iww/A4jPeZjZruwnZSkEuwnZSkGhPfLsrPu6dgAGEgSQSBGNQMagMgADDYofGG5L8xZlZQ+MNyX5izOOzrmI2hqXuI1nhSqSyiwliOS6VVuIbJyunKk61sTGbGsqtmGOWDR31yZFc1f/tqSX/hXYW3TcvU0Vd0sWqYrrime5qpsvTbpFc2CrJ4FyqVZSLM040aLHiOiRXXTlnfvNSxqXpHmDrLeHtW51op0XFNqimdYhY7F0mIyMyjq5VhRZo1FVfZfKaKnTeUvTmKGirS6Gic8xflNVOnKDNaKabsTHjCuxdMU16wDUBqKlpgAAAkgBqA1ACW4TcpM5xHLDetE8wdu3CblJnOI5Xb1onmC+yb4uyO54O2tAtBQpFbTeH7uH6msbNN4fu4fqax32A5ajZvUcMAAN1Izh4XYex4w8LsPYsMPwOIz3mY2a7sJ2UpBLsJ2UpBoT3y7Kz7unYABhIEkEgRjUDGoDIAAw2KHxhuS/MWZWUPjDcl+Yszjs65iNoal7iNZhFhQ40OJCek2vSS2pjRU6DPWCmiZpnWEUTp7YcvSKPFo0VYcRPi1yXnttQ8TqY9Hg0liw4rZpfRUqc1bWqUNKoMejTdJXwq5PYk+xzUvKdRhMfRejo1+ypbWcRFcaVeyXrsTCu6SsRcGBDXxv8AZT/ky+NSgUdaNR2Ndwj/APJFyl/17Lxt2lHjr3XXpmO6PYr8Rc6dcyDUBqNJAAAAAAGoDUAJbhNykznEcrt60TzB27cJuUmc4jlhvWieYL7Jvi7I7ng7a0C0FCkVtN4fu4fqaxs03h+7h+prHfYDlqNob1HDAADdSM4eF2HseMPC7D2LDD8DiM95mNmu7CdlKQS7CdlKQaE98uys+7p2AAYSBJBIEY1AxqAyAAMNih8YbkvxfAsysofGG5L8xZnHZ1zH7Q1L3EawNYKVCagNQAC0C0ANQGoAAAJIAAagNQAluE3KTOcRyu3rRPMHbtwm5SZziOV29aJ5gvsm+LsjueDtrQLQUKRW03h+7h+prGzTeH7tnqax32A5ajZvUcMAAN17Zw1RHVrKrGe00tQwosRINIgRFlco9EfO9cu9lTpHrDhMiRHNbKGxz1qSu5SZv4eY6MuWzjCVXb8VRPfGjlnYTulSCVcrlc5b7lVy9KrMg0ZnWXTUU9GmIAAYewkgkCMagY16QGQABh6QYm1RWPWckWTuhalLZFRyIqKiotaKlaKhSmbI0aHO4eqJZUqfJaiozHLvxcxXROlUIrlvpe2FxrBVbrpfOfa3QN10vnPtboKfsS/5o+v2RdTUtdQKrddL5z7W6Cd10vnPtboHYl/zR9fsdTUtBaVW66Xzn2t0DddL5z7W6B2Jf80fX7MdTUtRqKrddL5z7W6Buul859rdA7Ev+aPr9mepqWoKrddL5z/jdBO66Xzn2t0DsS/5o+v2OpqWgKvddL5z7W6CN10vnPtboHYl/wA0fX7HU1LXUCq3XS+c+1ugnddL5z7W6B2Jf80fX7MdTUtW4TcpM5xHK7etE8wdFuulpJdsrRUXBZoK7cNH29KTOJtqRtvndpLbLu7nKVpZ5fl93DdPpzHtj+eDxVYrnudKFqmq1IiTVVqREKrddK5z7W6DB8aPEqfEVUqqqRPklRXUZHdmdKqo0/dJFmfGWUeKkWK96YNTW5LapnkAdVboi3TFFPdDZiNI0gAB7ZDFKVsg+LFhRKVSHwUbWx0RytVFrRFT8vGQkk1XGt/sPdNc0xMfNDdsxcmmZ8J1CSAeEwAABJBIEY1Axr0gMgADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASQSBGNQZySa1CSWBlgDOSWCSWAYAzklgklgNGAM5JYJJYBgDOSWCSWAYAzklgklgNGAM5JYJJYBgDOSWCSWA0YAzklgklgGAM5JYJJYBgDOSWCSWA0YAzklgklgNGAM5JYJJYDRgDOSWCSWA0YAzklgklgYYAzklgklgZ0YAzklgklgNGBJlJLBJLAP/9k="
-            alt="Bootstrap"
-            width="60"
-            height="48"
-          />
-        </a>
-      </div>
-    </nav>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
-      >
-    </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-primary shadow" style="background-color: #0069d9;">
+  <div class="d-flex">
+  <a class="navbar-brand ml-1 mr-2" href="#" style="color:#FFC107; text-shadow: 0px 1px 1px #000000">StudyBee</a>
+  <ul class="navbar-nav">
+      <li class="nav-item">
+      <a class="nav-link" href="#">Diary Tracker</a>
+      </li>
+  </ul>
+  </div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav ml-auto">
+  </ul>
   </div>
 </nav>
 
@@ -117,7 +109,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="createModalLabel">
-            Tambah Transaksi
+            Tambah Diary
           </h1>
           <button
             type="button"
