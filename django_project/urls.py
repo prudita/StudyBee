@@ -22,4 +22,5 @@ urlpatterns = [
     path('', include('main.urls')),
     path('tracker/', include('study_bee.urls')),
     path('diary/', include('diary_tracker.urls')),
+    path('forum/', include('forum.urls')),
 ]

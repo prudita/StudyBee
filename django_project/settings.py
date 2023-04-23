@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'main',
     'study_bee',
     'diary_tracker',
+    'forum'
 ]
 
 MIDDLEWARE = [
