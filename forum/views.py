@@ -4,25 +4,24 @@ from forum.forms import PostForm
 from django.http import JsonResponse, HttpResponseRedirect, HttpResponse
 from django.urls import reverse
 from django.core import serializers
+from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 
 def show_forum(request):
     post_data = Post.objects.all()
     #answer_data = Answer.objects.all()
-    #question_form = QuestionForm()
-    #user = request.user
+    user = request.user
 
     context = {
         'list_of_post': post_data,
         #'list_of_answers': answer_data,
-        #'question_form': question_form,
-        #'user_status' : '',
-        #'username': user.username,
+        'username': user.username,
     }
     
     return render(request, 'forum.html', context)
 
+@csrf_exempt
 def create_forum_ajax(request):
     form = PostForm(request.POST or None)
 
@@ -31,6 +30,7 @@ def create_forum_ajax(request):
         data = Post.objects.last()
 
         result = {
+            'username' : data.user.username,
             'id': data.id, 
             'date': data.date,
             'title': data.title,

@@ -5,68 +5,62 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 <script type="text/javascript">
-$(document).ready(function(){
-      $.get("/forum/json-post/", function(data) {
-          for (i=0; i<data.length; i++){
-              $('#forum').append(`
+    $(document).ready(function(){
+        $.get("/forum/json-post/", function(data) {
+            for (i=0; i<data.length; i++){
+                $('#forum').append(`
                     <div id="${data[i].id}--task">
                         <div class="container-fluid">
-						    <div class="card" style="width: 50rem;">
-						        <div class="card-body">
+                            <div class="card" style="width: 50rem;">
+                                <div class="card-body">
                                     <h5 class="card-title">${data[i].fields.title}</h5>
-                                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                    <h6 class="card-subtitle mb-2 text-muted">${data[i].fields.username}</h6>
                                     <h6 class="card-date mb-2 text-muted">${data[i].fields.date}</h6>
                                     <p class="card-text">${data[i].fields.content}</p>
                                     <a href="/forum/delete/${data[i].pk}" class="btn btn-light delete mb-2">Delete</a>
                                     <a href="#" class="card-link">Another link</a>
-							    </div>
-						    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-              `)
-          }
-      });
-});
+                `)
+            }
+        })
 
-$("#submit_btn").click(function(){
-    $.post("/forum/create/", {
-        title: $("#title").val(),
-        content: $("#content").val()
-        },
-    function(result, status){
-        if (status == 'success'){
-            $("#forum").append(`
-            <div id="${result.id}--task" class="col-md-6 col-lg-3 mb-3"> 
-                <div class="container-fluid">
-                    <div class="card" style="width: 50rem;">
-                        <div class="card-body">
-                            <h5 class="card-title">${result.title}</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                            <h6 class="card-date mb-2 text-muted">${result.date}</h6>
-                            <p class="card-text">${result.content}</p>
-                            <a href="/forum/delete/${result.id}" class="btn btn-light delete mb-2">Delete</a>
-                            <a href="#" class="card-link">Another link</a>
+        $("#submit_btn").click(function(){
+            $.post("/forum/create/", {
+                title: $("#title").val(),
+                content: $("#content").val()
+            },
+            function(result, status){
+                if (status == 'success'){
+                    $("#forum").append(`
+                    <div id="${result.id}--task"> 
+                        <div class="container-fluid">
+                            <div class="card" style="width: 50rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title">${result.title}</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">${result.username}</h6>
+                                    <h6 class="card-date mb-2 text-muted">${result.date}</h6>
+                                    <p class="card-text">${result.content}</p>
+                                    <a href="/forum/delete/${result.id}" class="btn btn-light delete mb-2">Delete</a>
+                                    <a href="#" class="card-link">Another link</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            `);
-            $('#name').val('')
-            $('#date').val('')
-            $('#progress').val('')
-            $('#description').val('')
-        }
+                    `);
+                    $('#name').val('')
+                    $('#date').val('')
+                    $('#progress').val('')
+                    $('#description').val('')
+                }
+            });
+        });
     });
-});
-</script>
 
-<nav class="navbar navbar-expand-lg navbar bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand mb-0 h1">StudyBee</a>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">    
-      </div>
-    </div>
-</nav>
+
+</script>
 
 <body>
     <!-- Modal -->
